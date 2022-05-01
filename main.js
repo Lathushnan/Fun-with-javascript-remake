@@ -35,10 +35,10 @@ let input_fun = document.querySelector("#input-fun");
 
 let nickName = async () => {
    // fetching from json files
-   let specific_name = fetch("./specific_nick_name.json").then((res) =>
+   let specific_name = fetch("./json/specific_nick_name.json").then((res) =>
       res.json()
    );
-   let nick_names = fetch("./nick_names.json").then((res) => res.json());
+   let nick_names = fetch("./json/nick_names.json").then((res) => res.json());
    // initializing in variables
    let specific_res = await specific_name;
    let random_res = await nick_names;
