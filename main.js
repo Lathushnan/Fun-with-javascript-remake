@@ -1,10 +1,24 @@
-// Alert
-// window.addEventListener("load", () => {
-//    alert(`This is just for Fun
-//           Input name which
-//           others call you usually
-//                      :: Lathu 👍`);
-// });
+// Alert msg
+window.addEventListener("load", () => {
+   alert(`This is just for Fun
+          Input name which
+          others call you usually
+
+      Note :: 
+             plz don't try other's name
+                     :: Lathu 👍`);
+
+   alert(`You will different nick-names 
+          If you try it again and again
+                     :: Lathu 👍`);
+
+   alert(`Note :: (For my Friends)
+         I add custom nick-names 
+         for some of my friend 
+         Hope You Like it 😂
+                      :: Lathu 👍`);
+
+});
 
 // Modal box
 let dialog = document.querySelector("#fun-box-alert");
@@ -19,7 +33,7 @@ let input_fun = document.querySelector("#input-fun");
 
 // nick_names (Random name)
 
-let nick = async () => {
+let nickName = async () => {
    // fetching from json files
    let specific_name = fetch("./specific_nick_name.json").then((res) =>
       res.json()
@@ -68,4 +82,4 @@ let getName = (res, random_res, key) => {
       dialog.close();
    });
 };
-nick();
+nickName();
