@@ -26,7 +26,7 @@ header h1 {
 }
 @media screen and (max-width: 497px) {
    header h1 {
-      font-size: 20px;
+      font-size: 25px;
    }
 }
 header h1 span img {
@@ -61,7 +61,7 @@ dialog.fun-box-alert .fun-box-text {
    background: #fff;
    border-radius: 1rem;
    margin-right: 10px;
-   font-size: 1.5rem;
+   font-size: 1.7rem;
 }
 
 dialog.fun-box-alert #btn-close {
@@ -71,11 +71,9 @@ dialog.fun-box-alert #btn-close {
    cursor: pointer;
    border: none;
    outline: none;
+   font-size: 1.8rem;
 }
-dialog.fun-box-alert #btn-close img {
-   width: 30px;
-   height: auto;
-}
+
 .fun-container {
    background: #eee;
    padding: 2rem;
