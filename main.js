@@ -1,6 +1,8 @@
 // Alert
 window.addEventListener("load", () => {
    alert(`This is just for Fun
+          Input name which
+          others call you usually
                      :: Lathu 👍`);
 });
 
@@ -36,7 +38,7 @@ const nick_names = [
    "சூனா பானா",
    "பூரி செட்டு ",
 ];
-// specific names for my friends
+// specific names for your friends
 const specific_nick_name = {
    // First letter capital
    Ashvin: "Vijay kanth",
