@@ -1,5 +1,5 @@
 // Alert msg
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
    alert(`This is just for Fun
    Note::
           Input your name which
@@ -22,6 +22,7 @@ window.addEventListener("load", () => {
 
 // Modal box
 let dialog = document.querySelector("#fun-box-alert");
+
 // buttons
 let fun_btn = document.querySelector("#fun-btn");
 let close_btn = document.querySelector("#btn-close");
@@ -32,7 +33,6 @@ let input_name = document.querySelector("#input-name");
 let input_fun = document.querySelector("#input-fun");
 
 // nick_names (Random name)
-
 let nickName = async () => {
    // fetching from json files
    let specific_name = fetch("./json/specific_nick_name.json").then((res) =>
@@ -82,4 +82,5 @@ let getName = (res, random_res, key) => {
       dialog.close();
    });
 };
+
 nickName();

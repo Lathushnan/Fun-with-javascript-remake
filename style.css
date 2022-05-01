@@ -15,20 +15,16 @@ header {
    width: 100%;
    height: 60px;
    position: absolute;
-   background: #eee;
+   background: #635f5f;
+   border-bottom: 5px solid #0053ee;
 }
 header h1 {
    font-family: "roboto";
-   font-size: 34px;
-   color: #eee;
+   font-size: 38px;
+   color: #fff;
    border-radius: 1rem;
-   -webkit-text-stroke: 2px #0053ee;
 }
-@media screen and (max-width: 497px) {
-   header h1 {
-      font-size: 25px;
-   }
-}
+
 header h1 span img {
    position: relative;
    top: 1rem;
@@ -46,7 +42,6 @@ dialog.fun-box-alert {
    padding: 1.5rem;
    margin-top: 1rem;
    background: #0053ee;
-   color: #fff;
    font-size: 20px;
    left: 10px;
    transition: all ease 0.5s;
@@ -56,7 +51,7 @@ dialog.fun-box-alert::backdrop {
    background: #0053ee6b;
 }
 dialog.fun-box-alert .fun-box-text {
-   color: #0053ee;
+   color: #635f5f;
    padding: 0.75rem;
    background: #fff;
    border-radius: 1rem;
@@ -75,10 +70,11 @@ dialog.fun-box-alert #btn-close {
 }
 
 .fun-container {
-   background: #eee;
+   background: #635f5f;
    padding: 2rem;
    border-radius: 1rem;
    transition: 0.5s;
+   outline: 5px solid #0053ee;
 }
 
 .fun-container .fun-box {
@@ -98,20 +94,38 @@ dialog.fun-box-alert #btn-close {
    border-radius: 0.5rem;
    width: 100%;
    margin: 1rem 0;
-   font-size: 1rem;
+   font-size: 1.2rem;
    color: #000000;
-   outline: 2px solid #0053ee;
+   outline: 4px solid #0053ee;
 }
 .fun-container .fun-box .input-fun-btn {
    padding: 0.5rem 0.7rem;
    border-radius: 10px;
-   border: 2px solid #0053ee;
+   border: 4px solid #0053ee;
    cursor: pointer;
    font-size: 1.4rem;
    transition: 0.5s;
+   background: #fff;
 }
 
 .fun-container .fun-box .input-fun-btn:hover {
    background: #0053ee;
    color: #fff;
+}
+@media screen and (max-width: 497px) {
+   header h1 {
+      font-size: 25px;
+   }
+   .fun-container {
+      padding: 1rem;
+   }
+   .fun-container .fun-box .input-fun {
+      font-size: 1rem;
+   }
+   .fun-container .fun-box img {
+      width: 30%;
+   }
+   .fun-container .fun-box .input-fun-btn {
+      font-size: 1rem;
+   }
 }
