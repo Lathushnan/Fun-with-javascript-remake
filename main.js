@@ -1,14 +1,15 @@
 // Alert msg
 window.addEventListener("load", () => {
    alert(`This is just for Fun
-          Input name which
+   Note::
+          Input your name which
           others call you usually
 
       Note :: 
              plz don't try other's name
                      :: Lathu 👍`);
 
-   alert(`You will different nick-names 
+   alert(`You will get different nick-names,
           If you try it again and again
                      :: Lathu 👍`);
 
@@ -17,7 +18,6 @@ window.addEventListener("load", () => {
          for some of my friend 
          Hope You Like it 😂
                       :: Lathu 👍`);
-
 });
 
 // Modal box
