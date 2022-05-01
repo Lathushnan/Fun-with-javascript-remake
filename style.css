@@ -1,0 +1,117 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: poppins;
+}
+body {
+   height: 100vh;
+   width: auto;
+}
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 60px;
+   position: absolute;
+   background: #eee;
+}
+header h1 {
+   font-size: 32px;
+   color: #0053ee;
+   border-radius: 1rem;
+}
+@media screen and (max-width: 497px) {
+   header h1 {
+      font-size: 20px;
+   }
+}
+header h1 span img {
+   position: relative;
+   top: 1rem;
+}
+.fun {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+dialog.fun-box-alert {
+   position: absolute;
+   border: 2px solid #0053ee;
+   border-radius: 1rem;
+   padding: 1.5rem;
+   margin-top: 1rem;
+   background: #0053ee;
+   color: #fff;
+   font-size: 20px;
+   left: 10px;
+   transition: all ease 0.5s;
+   font-family: "Mukta-malar";
+}
+dialog.fun-box-alert::backdrop {
+   background: #0053ee6b;
+}
+dialog.fun-box-alert .fun-box-text {
+   color: #0053ee;
+   padding: 0.75rem;
+   background: #fff;
+   border-radius: 1rem;
+   margin-right: 10px;
+   font-size: 1.5rem;
+}
+
+dialog.fun-box-alert #btn-close {
+   padding: 0.75rem;
+   background: #fff;
+   border-radius: 1rem;
+   cursor: pointer;
+   border: none;
+   outline: none;
+}
+dialog.fun-box-alert #btn-close img {
+   width: 30px;
+   height: auto;
+}
+.fun-container {
+   background: #eee;
+   padding: 2rem;
+   border-radius: 1rem;
+   transition: 0.5s;
+}
+
+.fun-container .fun-box {
+   text-align: center;
+}
+.fun-container .fun-box img {
+   padding: 1rem;
+   background: #fff;
+   border-radius: 50%;
+   outline: 2px solid #0053ee;
+   width: 40%;
+   height: auto;
+}
+.fun-container .fun-box .input-fun {
+   padding: 0.75rem;
+   border: none;
+   border-radius: 0.5rem;
+   width: 100%;
+   margin: 1rem 0;
+   font-size: 1rem;
+   color: #000000;
+   outline: 2px solid #0053ee;
+}
+.fun-container .fun-box .input-fun-btn {
+   padding: 0.5rem 0.7rem;
+   border-radius: 10px;
+   border: 2px solid #0053ee;
+   cursor: pointer;
+   font-size: 1.4rem;
+   transition: 0.5s;
+}
+
+.fun-container .fun-box .input-fun-btn:hover {
+   background: #0053ee;
+   color: #fff;
+}

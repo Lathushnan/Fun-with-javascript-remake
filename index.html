@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Fun with Code</title>
+   </head>
+   <body>
+      
+      <header>
+         <h1>Nick-name generator 😆</h1>
+      </header>
+
+      <dialog class="fun-box-alert" id="fun-box-alert">
+         <div style="display: flex">
+            <div class="fun-box-text">
+               <span>
+                  <span id="input-name"></span> 😁
+                  <span id="nick-name"></span>
+               </span>
+            </div>
+            <button id="btn-close" name="retry">
+               <img src="./emoji/close.svg" alt="close" />
+            </button>
+         </div>
+      </dialog>
+
+      <div class="fun">
+         <div class="fun-container">
+            <div class="fun-box">
+               <div class="img-box">
+                  <img src="./emoji/laugh.svg" />
+               </div>
+               <div>
+                  <input
+                     type="text"
+                     class="input-fun"
+                     id="input-fun"
+                     placeholder="Your Name 😍"
+                  />
+                  <button type="submit" class="input-fun-btn" id="fun-btn">
+                     Have Fun 😄
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="./main.js"></script>
+   </body>
+</html>
