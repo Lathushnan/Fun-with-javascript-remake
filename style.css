@@ -18,9 +18,11 @@ header {
    background: #eee;
 }
 header h1 {
-   font-size: 32px;
-   color: #0053ee;
+   font-family: "roboto";
+   font-size: 34px;
+   color: #eee;
    border-radius: 1rem;
+   -webkit-text-stroke: 2px #0053ee;
 }
 @media screen and (max-width: 497px) {
    header h1 {
