@@ -38,65 +38,48 @@ const nick_names = [
    "சூனா பானா",
    "பூரி செட்டு ",
 ];
-// specific names for your friends
-const specific_nick_name = {
-   // First letter capital
-   Ashvin: "Vijay kanth",
-   Rohit: "Vijay",
-   Jude: "mama",
-   Geethan: "Smart Guy",
-   Lathu: "Smart Guy",
-   Sam: "Mr.Dog 🐶",
-   Sajohn: "Mr.புயல்",
 
-   // Lower case Name
-   ashvin: "Vijay kanth",
-   rohit: "Vijay",
-   jude: "mama",
-   geethan: "Smart Guy",
-   lathu: "Smart Guy",
-   sam: "Mr.Dog 🐶",
-   sajohn: "Mr.புயல்",
+let nick = async () => {
+   let name = fetch("./nick_name.json").then((res) => res.json());
+   let res = await name;
+   let key = Object.keys(res);
+   getName(res, key);
 };
 
-// object keys (Name of my Friends)
-let keys = Object.keys(specific_nick_name);
-
-fun_btn.addEventListener("click", () => {
-   // alert, if you didn't input your name
-   if (input_fun.value === "") {
-      alert(
-         `Plz input your name 😅
+let getName = (res, key) => {
+   fun_btn.addEventListener("click", () => {
+      if (input_fun.value === "") {
+         alert(
+            `Plz input your name 😅
           Not your full name
           Name others call you usually
                                 :: Lathu , Ashvin 👌`
-      );
-   } else {
-      dialog.showModal();
-   }
+         );
+      } else {
+         dialog.showModal();
+      } // selecting random index of the random nick-names
+      const random = Math.floor(Math.random() * nick_names.length);
+      const specific = key.find((name) => {
+         return name.indexOf(input_fun.value) > -1;
+      });
 
-   // selecting random index of the random nick-names
-   const random = Math.floor(Math.random() * nick_names.length);
-   // Selecting specific nick-name
-   const specific_name = keys.find((name) => {
-      return name.indexOf(input_fun.value) > -1;
+      const name = res[specific];
+      console.log(name);
+      input_name.innerText = input_fun.value;
+
+      if (input_fun.value === specific) {
+         // specific name
+         nick_name.innerText = name;
+      } else {
+         // random name
+         nick_name.innerText = nick_names[random];
+      }
+
+      // specific_name (Sorry guys)
    });
 
-   // specific_name (Sorry guys)
-   const name = specific_nick_name[specific_name];
-
-   //  dialog box(Your name)
-   input_name.innerText = input_fun.value;
-
-   if (input_fun.value === specific_name) {
-      // specific name
-      nick_name.innerText = name;
-   } else {
-      // random name
-      nick_name.innerText = nick_names[random];
-   }
-});
-
-close_btn.addEventListener("click", () => {
-   dialog.close();
-});
+   close_btn.addEventListener("click", () => {
+      dialog.close();
+   });
+};
+nick();
