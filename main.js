@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
 
    alert(`Note :: (For my Friends)
          I add custom nick-names 
-         for some of my friend 
+         for some of my friends 
          Hope You Like it 😂
                       :: Lathu 👍`);
 });
