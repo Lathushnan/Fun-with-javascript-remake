@@ -64,7 +64,7 @@ let getName = (res, key) => {
       });
 
       const name = res[specific];
-      console.log(name);
+  
       input_name.innerText = input_fun.value;
 
       if (input_fun.value === specific) {
