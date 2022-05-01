@@ -51,7 +51,7 @@ dialog.fun-box-alert::backdrop {
    background: #0053ee6b;
 }
 dialog.fun-box-alert .fun-box-text {
-   color: #635f5f;
+   color: #7a7777;
    padding: 0.75rem;
    background: #fff;
    border-radius: 1rem;
@@ -70,7 +70,7 @@ dialog.fun-box-alert #btn-close {
 }
 
 .fun-container {
-   background: #635f5f;
+   background: #7a7777;
    padding: 2rem;
    border-radius: 1rem;
    transition: 0.5s;
@@ -84,19 +84,20 @@ dialog.fun-box-alert #btn-close {
    padding: 1rem;
    background: #fff;
    border-radius: 50%;
-   outline: 2px solid #0053ee;
+   outline: 4px solid #0053ee;
    width: 40%;
    height: auto;
 }
 .fun-container .fun-box .input-fun {
-   padding: 0.75rem;
+   padding: 0.5rem;
    border: none;
    border-radius: 0.5rem;
    width: 100%;
    margin: 1rem 0;
-   font-size: 1.2rem;
+   font-size: 1.5rem;
    color: #000000;
    outline: 4px solid #0053ee;
+   font-weight: 600;
 }
 .fun-container .fun-box .input-fun-btn {
    padding: 0.5rem 0.7rem;
@@ -116,6 +117,8 @@ dialog.fun-box-alert #btn-close {
    header h1 {
       font-size: 25px;
    }
+}
+@media screen and (max-width: 734px) {
    .fun-container {
       padding: 1rem;
    }
@@ -123,9 +126,51 @@ dialog.fun-box-alert #btn-close {
       font-size: 1rem;
    }
    .fun-container .fun-box img {
+      width: 35%;
+   }
+   .fun-container .fun-box .input-fun-btn {
+      font-size: 1rem;
+   }
+   dialog.fun-box-alert {
+      padding: 1rem;
+   }
+   dialog.fun-box-alert .fun-box-text {
+      padding: 0.75rem;
+      font-size: 1rem;
+   }
+   dialog.fun-box-alert #btn-close {
+      font-size: 1.2rem;
+   }
+}
+
+@media screen and (max-width: 510px) {
+   .fun-container {
+      padding: 0.75rem;
+   }
+   .fun-container .fun-box .input-fun {
+      font-size: 0.75rem;
+   }
+   .fun-container .fun-box img {
+      padding: 0.75rem;
       width: 30%;
    }
    .fun-container .fun-box .input-fun-btn {
       font-size: 1rem;
+   }
+}
+
+@media screen and (max-width: 414px) {
+   .fun-container {
+      padding: 10px;
+   }
+   .fun-container .fun-box .input-fun {
+      font-size: 10px;
+   }
+   .fun-container .fun-box img {
+      padding: 0.75rem;
+      width: 30%;
+   }
+   .fun-container .fun-box .input-fun-btn {
+      font-size: 0.75rem;
    }
 }
