@@ -1,3 +1,15 @@
+// Modal box
+let dialog = document.querySelector("#fun-box-alert");
+
+// buttons
+let fun_btn = document.querySelector("#fun-btn");
+let close_btn = document.querySelector("#btn-close");
+
+// name input
+let nick_name = document.querySelector("#nick-name");
+let input_name = document.querySelector("#input-name");
+let input_fun = document.querySelector("#input-fun");
+
 // Alert msg
 window.addEventListener("DOMContentLoaded", () => {
    alert(`This is just for Fun
@@ -19,18 +31,6 @@ window.addEventListener("DOMContentLoaded", () => {
          Hope You Like it 😂
                       :: Lathu 👍`);
 });
-
-// Modal box
-let dialog = document.querySelector("#fun-box-alert");
-
-// buttons
-let fun_btn = document.querySelector("#fun-btn");
-let close_btn = document.querySelector("#btn-close");
-
-// name input
-let nick_name = document.querySelector("#nick-name");
-let input_name = document.querySelector("#input-name");
-let input_fun = document.querySelector("#input-fun");
 
 // nick_names (Random name)
 let nickName = async () => {
@@ -63,16 +63,18 @@ let getName = (res, random_res, key) => {
       // selecting random index of the random nick-names
       const random = Math.floor(Math.random() * random_res.length);
 
+      let input_lowerCase = input_fun.value.toString().toLowerCase();
+
       // Selecting the nick_name for specific persons
       const specific = key.find((name) => {
-         return name.indexOf(input_fun.value.toString().toLowerCase()) > -1;
+         return name.indexOf(input_lowerCase) > -1;
       });
 
       const name = res[specific];
 
       input_name.innerText = input_fun.value;
 
-      if (input_fun.value.toString().toLowerCase() === specific) {
+      if (input_lowerCase === specific) {
          // specific name
          nick_name.innerText = name;
       } else {
