@@ -60,6 +60,7 @@ let getName = (res, random_res, key) => {
       } else {
          dialog.showModal();
       }
+
       // selecting random index of the random nick-names
       const random = Math.floor(Math.random() * random_res.length);
 
@@ -80,7 +81,7 @@ let getName = (res, random_res, key) => {
       } else {
          // random name
          nick_name.innerText = random_res[random];
-      }
+      }  
    });
 
    close_btn.addEventListener("click", () => {
