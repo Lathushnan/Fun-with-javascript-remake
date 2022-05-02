@@ -59,17 +59,20 @@ let getName = (res, random_res, key) => {
          );
       } else {
          dialog.showModal();
-      } // selecting random index of the random nick-names
+      }
+      // selecting random index of the random nick-names
       const random = Math.floor(Math.random() * random_res.length);
+
+      // Selecting the nick_name for specific persons
       const specific = key.find((name) => {
-         return name.indexOf(input_fun.value) > -1;
+         return name.indexOf(input_fun.value.toString().toLowerCase()) > -1;
       });
 
       const name = res[specific];
 
       input_name.innerText = input_fun.value;
 
-      if (input_fun.value === specific) {
+      if (input_fun.value.toString().toLowerCase() === specific) {
          // specific name
          nick_name.innerText = name;
       } else {
